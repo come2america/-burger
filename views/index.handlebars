@@ -1,0 +1,35 @@
+<h1>Burger App</h1>
+
+<p>Devour It</p>
+
+<!-- Pass in data from server.js -->
+<ul>
+  {{#each Burgers}}
+  	<li>
+  		<p><span class="label">ID:</span> {{this.ID}}</p>
+      <p><span class="label">Burger:</span> {{this.Burgers}}</p>
+      {{!-- <p><span class="label">Author:</span> {{this.author}}</p> --}}
+
+      <button data-id="{{this.ID}}" class="devour">Devour it</button>
+
+     
+  	</li>
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+
+<form class="create-form">
+
+  {{!-- <div class="form-group">
+    <label for="auth">Author:</label>
+    <input type="text" id="auth" name="author">
+  </div> --}}
+
+  <div class="form-group">
+    <label for="quo">Quote:</label>
+    <textarea id="quo" name="Burgers" rows="8" cols="40"></textarea>
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
